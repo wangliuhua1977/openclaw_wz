@@ -13,7 +13,10 @@
     </modules>
 
     <properties>
+        <java.version>22</java.version>
         <maven.compiler.release>22</maven.compiler.release>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <flatlaf.version>3.5.4</flatlaf.version>
         <jackson.version>2.18.2</jackson.version>
@@ -66,6 +69,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.13.0</version>
                     <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
                         <release>${maven.compiler.release}</release>
                     </configuration>
                 </plugin>
